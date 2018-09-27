@@ -114,7 +114,7 @@ type Request struct {
 // NewRequest creates a new request helper object for accessing runtime.Objects on a server.
 func NewRequest(client HTTPClient, verb string, baseURL *url.URL, versionedAPIPath string, content ContentConfig, serializers Serializers, backoff BackoffManager, throttle flowcontrol.RateLimiter, timeout time.Duration) *Request {
 	if backoff == nil {
-		glog.V(2).Infof("Not implementing request backoff strategy.")
+		glog.V(2).Info("Not implementing request backoff strategy.")
 		backoff = &NoBackoff{}
 	}
 

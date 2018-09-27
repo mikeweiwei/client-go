@@ -78,7 +78,7 @@ func (d *CachedDiscoveryClient) ServerResourcesForGroupVersion(groupVersion stri
 		return liveResources, err
 	}
 	if liveResources == nil || len(liveResources.APIResources) == 0 {
-		glog.V(3).Infof("skipped caching discovery info, no resources found")
+		glog.V(3).Info("skipped caching discovery info, no resources found")
 		return liveResources, err
 	}
 

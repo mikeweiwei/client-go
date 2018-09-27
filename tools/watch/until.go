@@ -135,7 +135,7 @@ func UntilWithSync(ctx context.Context, lw cache.ListerWatcher, objType runtime.
 func ContextWithOptionalTimeout(parent context.Context, timeout time.Duration) (context.Context, context.CancelFunc) {
 	if timeout < 0 {
 		// This should be handled in validation
-		glog.Errorf("Timeout for context shall not be negative!")
+		glog.Error("Timeout for context shall not be negative!")
 		timeout = 0
 	}
 
